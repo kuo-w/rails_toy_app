@@ -16,6 +16,7 @@
 
 $white_opaque: rgba(250, 250, 250, 0.3);
 $dark: #1f7972;
+$text-input-bg: #eee;
 
 * {
   box-sizing: border-box;
@@ -26,30 +27,29 @@ html {
 
 body {
   height: 100%;
-  background: -webkit-linear-gradient(40deg, #4cb8c4 10%, #eaecc6 100%);
-  background: -moz-linear-gradient(40deg, #4cb8c4 10%, #eaecc6 100%);
-  background: -ms-linear-gradient(40deg, #4cb8c4 10%, #eaecc6 100%);
-  background: -o-linear-gradient(40deg, #4cb8c4 10%, #eaecc6 100%);
-  background: linear-gradient(40deg, #4cb8c4 10%, #eaecc6 100%);
   font-family: "Lato", sans-serif;
 }
 
 #notice {
   text-align: center;
-  font-size: 0.6em;
+  font-size: 1.2em;
   color: $dark;
   font-weight: 100;
 }
 
 .container {
+  background: #efefef;
   width: 50%;
   max-width: 750px;
-  background: $white_opaque;
   margin: 3em auto 0 auto;
   border-radius: 7px;
-  -webkit-box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.03);
-  padding: 1em 0;
+  height: auto;
+}
+
+.content {
+  background: white;
+  padding: 2em;
 }
 
 .todo_list_title {
@@ -87,19 +87,18 @@ body {
 
 #todo_items_wrapper {
   .row {
+    display: flex;
     width: 100%;
-    border-top: 1px solid rgba(250, 250, 250, 0.3);
-    border-bottom: 1px solid rgba(250, 250, 250, 0.3);
     .complete {
       width: 10%;
-      float: left;
       text-align: center;
-      border-right: 1px solid rgba(250, 250, 250, 0.3);
       padding: 1em 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .todo_item {
       width: 80%;
-      float: left;
       p {
         margin: 0;
         padding: 1em;
@@ -109,10 +108,11 @@ body {
     }
     .trash {
       width: 10%;
-      float: left;
       text-align: center;
-      border-left: 1px solid rgba(250, 250, 250, 0.3);
       padding: 1em 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     i {
       color: white;
@@ -130,14 +130,14 @@ body {
       margin-right: 2%;
       display: inline-block;
       outline: none;
-      background: rgba(250, 250, 250, 0.4);
+      background: $text-input-bg;
       border: none;
       height: 40px;
       border-radius: 4px;
       padding: 1em 2em;
     }
     input[type="submit"] {
-      background: rgba(250, 250, 250, 0.4);
+      background: $text-input-bg;
       outline: none;
       border: none;
       height: 40px;
@@ -179,7 +179,7 @@ textarea {
   margin: 0.5em 2% 1em 0;
   display: inline-block;
   outline: none;
-  background: rgba(250, 250, 250, 0.4);
+  background: $text-input-bg;
   border: none;
   height: 40px;
   border-radius: 4px;
@@ -189,7 +189,7 @@ textarea {
   height: 200px;
 }
 input[type="submit"] {
-  background: white;
+  background: $text-input-bg;
   outline: none;
   border: none;
   height: 40px;
