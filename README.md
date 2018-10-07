@@ -6,6 +6,7 @@ Also an exercise in how to deploy a Kubernetes cluster on
 Google Kubernetes Engine
 
 [Toy App Resource](https://www.railstutorial.org/book/toy_app)
+
 [Kubernetes Hello App](https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app)
 
 ## Getting Started
